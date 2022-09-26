@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Papers, Please
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/239030
+Icon=steam_icon_239030
+Terminal=false
+Type=Application
+Categories=Game;

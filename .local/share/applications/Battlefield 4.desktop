@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Battlefield 4™ 
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1238860
+Icon=steam_icon_1238860
+Terminal=false
+Type=Application
+Categories=Game;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Mini Metro
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/287980
+Icon=steam_icon_287980
+Terminal=false
+Type=Application
+Categories=Game;
