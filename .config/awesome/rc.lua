@@ -1031,6 +1031,9 @@ awful.rules.rules = {
     { rule = { class = "Minecraft* 1.19.2" },
         properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
 
+    { rule = { class = "obsidian" },
+        properties = { screen = 3, tag = awful.util.tagnames[3], switchtotag = false  } },
+
     { rule = { class = "Pamac-manager" },
         properties = { screen = 1, tag = awful.util.tagnames[5], switchtotag = false  } },
 
