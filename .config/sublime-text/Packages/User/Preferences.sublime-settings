@@ -1,0 +1,23 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+	"theme": "Material-Theme-Palenight.sublime-theme",
+	"always_show_minimap_viewport": true,
+	"folder_exclude_patterns": [
+		".svn", 
+		".git", 
+		".hg", 
+		"CVS", 
+		".Trash", 
+		".Trash-*",
+		".cache",
+		"node_modules",
+		"bower_components"
+	],
+	"file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", ".directory", "desktop.ini", "*.class", "*.psd", "*.db", "*.sublime-workspace"],
+	"font_size": 12,
+	"original_color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+}

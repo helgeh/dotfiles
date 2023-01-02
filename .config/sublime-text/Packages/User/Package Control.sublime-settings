@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Javascript Beautify",
+		"JSON Reindent",
+		"Material Theme",
+		"Package Control",
+		"Sublimerge 3",
+		"TOML",
+	],
+}
