@@ -258,14 +258,79 @@ theme.volume.widget:buttons(awful.util.table.join(
                                end)
 ))
 
+
+
+-- function bytesToSize(b)
+--     local bts = tonumber(b);
+--     local prec = 2;
+--     local kib = 1024;
+--     local mib = kib * 1024;
+--     local gib = mib * 1024;
+--     local tib = gib * 1024;
+
+--     local result = bts .. " B";
+
+--     if ((bts >= 0) and (bts < kib)) then
+--         result = bts .. " B";
+--     elseif ((bts >= kib) and (bts < mib)) then
+--         result = round(bts / kib, precision) .. " KB";
+--     elseif ((bts >= mib) and (bts < gib)) then
+--         result = round(bts / mib, precision) .. " MB";
+--     elseif ((bts >= gib) and (bts < tib)) then
+--         result = round(bts / gib, precision) .. " GB";
+--     elseif (bts >= tib) then
+--         result = round(bts / tib, precision) .. " TB";
+--     end
+
+--     if string.len(result) < 7 then
+--             result = "  " .. result;
+--     if string.len(result) < 6 then
+--             result = " " .. result;
+
+--     return result;
+-- end
+
+function bytesToSize(b)
+    local bts = tonumber(b) * 1024;
+    local prec = 2;
+    local kib = 1024;
+    local mib = kib * 1024;
+    local gib = mib * 1024;
+    local tib = gib * 1024;
+
+    if ((bts >= 0) and (bts < kib)) then
+        return bts .. " B";
+    elseif ((bts >= kib) and (bts < mib)) then
+        return round(bts / kib, precision) .. " KB";
+    elseif ((bts >= mib) and (bts < gib)) then
+        return round(bts / mib, precision) .. " MB";
+    elseif ((bts >= gib) and (bts < tib)) then
+        return round(bts / gib, precision) .. " GB";
+    elseif (bts >= tib) then
+        return round(bts / tib, precision) .. " TB";
+    end
+        -- if string.len(rec) < 7 then 
+        --     rec = "  " .. rec;
+        -- if string.len(snt) < 7 then
+        --     snt = "  " .. snt;
+
+    return bts .. " B";
+end
+
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
 local net = lain.widget.net({
     settings = function()
+        -- local rec = bytesToSize(net_now.received);
+        -- local snt = bytesToSize(net_now.sent);
         widget:set_markup(markup.font(theme.font,
-                          markup("#7AC82E", " " .. string.format("%06.1f", net_now.received))
+                            -- markup("#7AC82E", " " .. string.format("%f", net_now.received))
+                            markup("#7AC82E", " " .. string.format("%07.1f", net_now.received))
+                          -- markup("#7AC82E", " " .. net_now.received)
                           .. " " ..
-                          markup("#46A8C3", " " .. string.format("%06.1f", net_now.sent) .. " ")))
+                            -- markup("#46A8C3", " " .. string.format("%f", net_now.sent) .. " ")))
+                            markup("#46A8C3", " " .. string.format("%07.1f", net_now.sent) .. " ")))
+                          -- markup("#46A8C3", " " .. net_now.sent .. " ")))
     end
 })
 

@@ -14,15 +14,15 @@ EXTRA=$4
 [[ -z $4 ]] && EXTRA=$3
 
 
-[[ "$MON" == "1" ]] && MON="DP-0"
-[[ "$MON" == "2" ]] && MON="DP-2"
-[[ "$MON" == "3" ]] && MON="DP-2"
+[[ "$MON" == "1" ]] && MON="DP-1"
+[[ "$MON" == "2" ]] && MON="DP-3"
+[[ "$MON" == "3" ]] && MON="DP-3"
 
 [[ "$MON" == "main" ]] && MON="DP-4"
-[[ "$MON" == "left" || "$MON" == "l" ]] && MON="DP-0"
-[[ "$MON" == "right" || "$MON" == "r" ]] && MON="DP-2"
+[[ "$MON" == "left" || "$MON" == "l" ]] && MON="DP-1"
+[[ "$MON" == "right" || "$MON" == "r" ]] && MON="DP-3"
 
-[[ "$MON" == "DP-0" || "$MON" == "DP-2" || "$MON" == "DP-4" ]] || MON="error"
+[[ "$MON" == "DP-1" || "$MON" == "DP-3" || "$MON" == "DP-4" ]] || MON="error"
 
 [[ "$CMND" == "inc" || "$CMND" == "increment" || "$CMND" == "up" || "$CMND" == "+" ]]   && CMND="increment"
 [[ "$CMND" == "dec" || "$CMND" == "decrement" || "$CMND" == "down" || "$CMND" == "-" ]] && CMND="decrement"
