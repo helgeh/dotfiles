@@ -1025,10 +1025,13 @@ awful.rules.rules = {
     { rule = { class = "discord" },
         properties = { screen = 3, tag = awful.util.tagnames[4], switchtotag = false  } },
 
-    { rule = { class = "MultiMC" },
+    { rule = { class = "PrismLauncher" },
         properties = { screen = 2, tag = awful.util.tagnames[4], switchtotag = false  } },
 
-    { rule = { class = "Minecraft* 1.19.2" },
+    { rule = { class = "Minecraft* 1.19.3" },
+        properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
+
+    { rule = { class = "portal2_linux" },
         properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
 
     { rule = { class = "obsidian" },
