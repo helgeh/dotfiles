@@ -6,10 +6,13 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"Dockerfile Syntax Highlighting",
+		"EJS",
 		"Javascript Beautify",
 		"JSON Reindent",
 		"Material Theme",
 		"Package Control",
 		"TOML",
+		"Vue Syntax Highlight",
 	],
 }

@@ -2,3 +2,4 @@
 application/x-tint2-theme=tint2conf.desktop;
 text/plain=hardcode-fixer.desktop;quick-system-info.desktop;
 x-scheme-handler/curseforge=appimagekit_e6742f99b46751d38bb96763be66e4bf-CurseForge.desktop;
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop;
