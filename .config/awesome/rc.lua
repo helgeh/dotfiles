@@ -1043,6 +1043,9 @@ awful.rules.rules = {
     { rule = { class = "Pamac-manager" },
         properties = { screen = 1, tag = awful.util.tagnames[5], switchtotag = false  } },
 
+    { rule = { class = "Rustdesk" },
+        properties = { screen = 2, tag = awful.util.tagnames[6], switchtotag = false  } },
+
 
     -- Set applications to always map on the tag 1 on screen 1.
     -- find class or role via xprop command

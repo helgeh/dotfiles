@@ -39,3 +39,5 @@ run /usr/lib/nordtray/nordtray
 run nordvpn c no
 
 run obsidian
+
+# run rustdesk
