@@ -6,10 +6,13 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"Babel",
 		"Dockerfile Syntax Highlighting",
 		"EJS",
 		"Javascript Beautify",
 		"JSON Reindent",
+		"LSP",
+		"LSP-volar",
 		"Material Theme",
 		"Package Control",
 		"TOML",

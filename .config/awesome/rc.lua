@@ -1028,10 +1028,10 @@ awful.rules.rules = {
     { rule = { class = "PrismLauncher" },
         properties = { screen = 2, tag = awful.util.tagnames[4], switchtotag = false  } },
 
-    { rule = { class = "Minecraft 1.20.1" },
+    { rule = { class = "Minecraft 1.20.2" },
         properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
 
-    { rule = { class = "Minecraft* 1.20.1" },
+    { rule = { class = "Minecraft* 1.20.2" },
         properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
 
     { rule = { class = "portal2_linux" },
