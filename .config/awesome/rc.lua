@@ -1002,6 +1002,7 @@ awful.rules.rules = {
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
+                     callback = awful.client.setslave,
                      focus = awful.client.focus.filter,
                      raise = true,
                      keys = clientkeys,
@@ -1272,6 +1273,22 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
+-- switch to parent after closing child window
+local function backham()
+    local s = awful.screen.focused()
+    local c = awful.client.focus.history.get(s, 0)
+    if c then
+        client.focus = c
+        c:raise()
+    end
+end
+
+-- attach to minimized state
+client.connect_signal("property::minimized", backham)
+-- attach to closed state
+client.connect_signal("unmanage", backham)
+-- ensure there is always a selected client during tag switching or logins
+tag.connect_signal("property::selected", backham)
 
 -- }}}
 

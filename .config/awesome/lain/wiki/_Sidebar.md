@@ -13,7 +13,7 @@
 * [Widgets](https://github.com/lcpz/lain/wiki/Widgets)
   * [Usage](https://github.com/lcpz/lain/wiki/Widgets#usage)
   * [Index](https://github.com/lcpz/lain/wiki/Widgets#index)
-    * [Users contributed](https://github.com/lcpz/lain/wiki/Widgets#users-contributed)
+    * [Contributed by users](https://github.com/lcpz/lain/wiki/Widgets#users-contributed)
 * [Utilities](https://github.com/lcpz/lain/wiki/Utilities)
     * [quake](https://github.com/lcpz/lain/wiki/Utilities#quake)
     * [separators](https://github.com/lcpz/lain/wiki/Utilities#separators)

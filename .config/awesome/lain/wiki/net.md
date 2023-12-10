@@ -21,6 +21,7 @@ Variable | Meaning | Type | Default
 `wifi_state` | Get Wi-Fi connection status | string | "off"
 `eth_state` | Get Ethernet connection status | string | "off"
 `screen` | Notifications screen | integer | 1
+`format` | String format for output | string | "%.1f"
 `settings` | User settings | function | empty function
 
 `iface` can be a string or an table of the form `{ "eth0", "eth1", ... }` containing a list of the devices to collect data on.

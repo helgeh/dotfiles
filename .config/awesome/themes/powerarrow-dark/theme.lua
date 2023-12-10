@@ -192,6 +192,8 @@ local cpu = lain.widget.cpu({
 -- Coretemp
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
 local temp = lain.widget.temp({
+    tempfile = "/sys/devices/virtual/thermal/thermal_zone1/temp",
+    timeout = 5,
     settings = function()
         widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
     end
