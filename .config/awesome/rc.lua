@@ -783,7 +783,7 @@ globalkeys = my_table.join(
         function ()
             os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
             beautiful.volume.update()
-        end)
+        end),
     -- awful.key({ modkey1, "Shift" }, "m",
     --     function ()
     --         os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
@@ -845,6 +845,13 @@ globalkeys = my_table.join(
     --         naughty.notify(common)
     --     end,
     --     {description = "mpc on/off", group = "widgets"}),
+
+
+    awful.key({ modkey1, "Shift" }, "s",
+    function ()
+        naughty.notify({ text = "MPD widget ", position = "top_middle", timeout = 2 })
+    end,
+    {description = "testing naughty notify", group = "test"})
 
     -- Copy primary to clipboard (terminals to gtk)
     --awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
@@ -1274,21 +1281,21 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- switch to parent after closing child window
-local function backham()
-    local s = awful.screen.focused()
-    local c = awful.client.focus.history.get(s, 0)
-    if c then
-        client.focus = c
-        c:raise()
-    end
-end
+-- local function backham()
+--     local s = awful.screen.focused()
+--     local c = awful.client.focus.history.get(s, 0)
+--     if c then
+--         client.focus = c
+--         c:raise()
+--     end
+-- end
 
--- attach to minimized state
-client.connect_signal("property::minimized", backham)
--- attach to closed state
-client.connect_signal("unmanage", backham)
--- ensure there is always a selected client during tag switching or logins
-tag.connect_signal("property::selected", backham)
+-- -- attach to minimized state
+-- client.connect_signal("property::minimized", backham)
+-- -- attach to closed state
+-- client.connect_signal("unmanage", backham)
+-- -- ensure there is always a selected client during tag switching or logins
+-- tag.connect_signal("property::selected", backham)
 
 -- }}}
 
