@@ -309,7 +309,7 @@ alias personal='cp -Rf /personal/* ~'
 #paleofetch
 #fetch
 #hfetch
-sfetch
+#sfetch
 #ufetch
 #ufetch-arco
 #pfetch
@@ -317,6 +317,7 @@ sfetch
 #sysinfo-retro
 #cpufetch
 #colorscript random
+fastfetch
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

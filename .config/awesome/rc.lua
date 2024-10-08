@@ -495,8 +495,8 @@ globalkeys = my_table.join(
         {description = scrlocker, group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "l", function() awful.util.spawn( "arcolinux-logout" ) end,
         {description = scrlocker, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "o", function() awful.spawn.with_shell("$HOME/.config/awesome/scripts/picom-toggle.sh") end,
-        {description = "Picom toggle", group = "alt+ctrl"}),
+    -- awful.key({ modkey1, altkey   }, "o", function() awful.spawn.with_shell("$HOME/.config/awesome/scripts/picom-toggle.sh") end,
+    --     {description = "Picom toggle", group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "s", function() awful.util.spawn( mediaplayer ) end,
         {description = mediaplayer, group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "t", function() awful.util.spawn( terminal ) end,
@@ -849,9 +849,20 @@ globalkeys = my_table.join(
 
     awful.key({ modkey1, "Shift" }, "s",
     function ()
-        naughty.notify({ text = "MPD widget ", position = "top_middle", timeout = 2 })
+        -- naughty.notify({text = "skjermsparer"})
+        -- awful.tag.viewnone()
+        for s in screen do
+            -- naughty.notify({text = "skjerm " .. s})
+            -- awful.tag.viewnone(s)
+            -- awful.tag.viewidx(4, s)
+            s.mywibox.visible = false
+            local tag = s.tags[5]
+            if tag then
+               tag:view_only()
+            end
+        end
     end,
-    {description = "testing naughty notify", group = "test"})
+    {description = "tag 5 og hidden wibox", group = "PERSONAL"})
 
     -- Copy primary to clipboard (terminals to gtk)
     --awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
@@ -906,8 +917,8 @@ clientkeys = my_table.join(
               {description = "Stretch Left window edge", group = "client"}),
     awful.key({ modkey, altkey    }, "Right",      function (c) awful.placement.stretch_right(c) end,
               {description = "Stretch Right window edge", group = "client"}),
-    --awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              --{description = "toggle keep on top", group = "client"}),
+    awful.key({ modkey, "Shift"   }, "o",      function (c) c.ontop = not c.ontop            end,
+              {description = "toggle keep on top", group = "client"}),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
@@ -1028,7 +1039,7 @@ awful.rules.rules = {
         properties = { screen = 1, tag = awful.util.tagnames[3], switchtotag = false  } },
 
     { rule = { class = "spotify" },
-        properties = { screen = 3, tag = awful.util.tagnames[5], switchtotag = false  } },
+        properties = { screen = 1, tag = awful.util.tagnames[5], switchtotag = false  } },
 
     { rule = { class = "discord" },
         properties = { screen = 3, tag = awful.util.tagnames[4], switchtotag = false  } },
@@ -1036,10 +1047,10 @@ awful.rules.rules = {
     { rule = { class = "PrismLauncher" },
         properties = { screen = 2, tag = awful.util.tagnames[4], switchtotag = false  } },
 
-    { rule = { class = "Minecraft 1.20.2" },
+    { rule = { class = "Minecraft 1.21" },
         properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
 
-    { rule = { class = "Minecraft* 1.20.2" },
+    { rule = { class = "Minecraft* 1.21" },
         properties = { screen = 1, tag = awful.util.tagnames[4], switchtotag = false  } },
 
     { rule = { class = "portal2_linux" },
@@ -1052,7 +1063,7 @@ awful.rules.rules = {
         properties = { screen = 1, tag = awful.util.tagnames[5], switchtotag = false  } },
 
     { rule = { class = "Rustdesk" },
-        properties = { screen = 2, tag = awful.util.tagnames[6], switchtotag = false  } },
+        properties = { screen = 1, tag = awful.util.tagnames[6], switchtotag = false  } },
 
 
     -- Set applications to always map on the tag 1 on screen 1.

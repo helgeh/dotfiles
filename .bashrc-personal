@@ -5,3 +5,6 @@ alias bright="~/scripts/monitor-brightness.sh"
 
 alias monitor-power="~/scripts/monitor-power.sh"
 alias monpow="~/scripts/monitor-power.sh"
+
+
+alias cls="clear && fastfetch"

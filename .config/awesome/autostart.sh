@@ -35,8 +35,8 @@ run dropbox
 run subl
 #run Spotify # <-- funker ikke...
 
-run /usr/lib/nordtray/nordtray
-run nordvpn c no
+# run /usr/lib/nordtray/nordtray
+# run nordvpn c no
 
 run obsidian
 
